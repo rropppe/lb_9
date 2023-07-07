@@ -21,7 +21,7 @@ class BaseMixin(Base):
 
 
 class Employee(BaseMixin):
-    __tablename__ = "SEA_employees"
+    __tablename__ = "ESD_employees"
 
     id = Column(Integer, primary_key=True)
     surname = Column(String, nullable=False)
@@ -32,21 +32,21 @@ class Employee(BaseMixin):
 
 
 class Position(BaseMixin):
-    __tablename__ = 'SEA_positions'
+    __tablename__ = 'ESD_positions'
 
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
 
 
 class Division(BaseMixin):
-    __tablename__ = 'SEA_divisions'
+    __tablename__ = 'ESD_divisions'
 
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
 
 
 class Job(BaseMixin):
-    __tablename__ = 'SEA_job'
+    __tablename__ = 'ESD_job'
 
     id = Column(Integer, primary_key=True)
     staffer_id = Column(Integer, ForeignKey('SEA_employees.id'))
